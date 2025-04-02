@@ -30,9 +30,10 @@ const Hero = () => {
     if (elementRef.current) {
       const children = elementRef.current.children;
       for (let i = 0; i < children.length; i++) {
-        children[i].classList.add('opacity-0', 'translate-y-10');
-        children[i].style.animationDelay = `${i * 0.1}s`;
-        observer.observe(children[i]);
+        const child = children[i] as HTMLElement;
+        child.classList.add('opacity-0', 'translate-y-10');
+        child.style.animationDelay = `${i * 0.1}s`;
+        observer.observe(child);
       }
     }
 
