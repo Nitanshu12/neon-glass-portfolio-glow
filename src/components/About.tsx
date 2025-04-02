@@ -74,7 +74,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="text-neon-blue font-medium mb-2">Email</h3>
-                    <p className="text-sm text-foreground/80">nitanshugoyal786@gmail.com/p>
+                    <p className="text-sm text-foreground/80">nitanshugoyal786@gmail.com</p>
                   </div>
                   <div>
                     <h3 className="text-neon-purple font-medium mb-2">Languages</h3>
