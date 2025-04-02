@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="order-2 md:order-1 flex flex-col gap-6">
           <h2 className="text-lg md:text-xl text-neon-green">Welcome to my portfolio</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Hi, I'm <span className="text-gradient-primary animate-glow">Your Name</span>
+            Hi, I'm <span className="text-gradient-primary animate-glow">Nitanshu Goyal</span>
           </h1>
           <p className="text-xl text-foreground/80">
             I build stunning <span className="text-neon-pink font-medium">web experiences</span> with modern technologies
