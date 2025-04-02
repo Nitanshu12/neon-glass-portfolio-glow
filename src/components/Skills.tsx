@@ -26,17 +26,13 @@ const Skills = () => {
   
   const skills: Skill[] = [
     { name: 'HTML/CSS', level: 92, icon: Globe, category: 'frontend' },
-    { name: 'JavaScript', level: 88, icon: Code, category: 'frontend' },
-    { name: 'React', level: 85, icon: Code, category: 'frontend' },
-    { name: 'TypeScript', level: 80, icon: Code, category: 'frontend' },
+    { name: 'JavaScript', level: 70, icon: Code, category: 'frontend' },
+    { name: 'React', level: 50, icon: Code, category: 'frontend' },
+    { name: 'TypeScript', level: 30, icon: Code, category: 'frontend' },
     { name: 'Responsive Design', level: 90, icon: Smartphone, category: 'frontend' },
-    { name: 'Node.js', level: 78, icon: Server, category: 'backend' },
-    { name: 'Express', level: 75, icon: Server, category: 'backend' },
-    { name: 'MongoDB', level: 72, icon: Database, category: 'backend' },
-    { name: 'SQL', level: 70, icon: Database, category: 'backend' },
-    { name: 'Figma', level: 88, icon: Figma, category: 'design' },
-    { name: 'UI/UX Design', level: 85, icon: Layers, category: 'design' },
-    { name: 'Git', level: 82, icon: GitBranch, category: 'other' },
+    { name: 'Figma', level: 80, icon: Figma, category: 'design' },
+    { name: 'UI/UX Design', level: 70, icon: Layers, category: 'design' },
+    { name: 'Git', level: 80, icon: GitBranch, category: 'other' },
   ];
   
   const filteredSkills = activeCategory === 'all' 
