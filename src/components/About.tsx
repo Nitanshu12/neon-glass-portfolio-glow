@@ -65,19 +65,19 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div>
                     <h3 className="text-neon-green font-medium mb-2">Education</h3>
-                    <p className="text-sm text-foreground/80">B.S. Computer Science, University Name (2018-2022)</p>
+                    <p className="text-sm text-foreground/80">B-tech in Artificial Technology (2024-2028)</p>
                   </div>
                   <div>
                     <h3 className="text-neon-pink font-medium mb-2">Location</h3>
-                    <p className="text-sm text-foreground/80">San Francisco, CA</p>
+                    <p className="text-sm text-foreground/80">Patiala,Punjab</p>
                   </div>
                   <div>
                     <h3 className="text-neon-blue font-medium mb-2">Email</h3>
-                    <p className="text-sm text-foreground/80">your.email@example.com</p>
+                    <p className="text-sm text-foreground/80">nitanshugoyal786@gmail.com/p>
                   </div>
                   <div>
                     <h3 className="text-neon-purple font-medium mb-2">Languages</h3>
-                    <p className="text-sm text-foreground/80">English, Spanish</p>
+                    <p className="text-sm text-foreground/80">English, Hindi</p>
                   </div>
                 </div>
               </div>
