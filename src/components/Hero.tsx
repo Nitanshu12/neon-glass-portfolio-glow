@@ -8,7 +8,7 @@ const Hero = () => {
     { icon: Github, href: "https://github.com", ariaLabel: "GitHub Profile" },
     { icon: Linkedin, href: "https://linkedin.com", ariaLabel: "LinkedIn Profile" },
     { icon: Twitter, href: "https://twitter.com", ariaLabel: "Twitter Profile" },
-    { icon: Mail, href: "mailto:your.email@example.com", ariaLabel: "Send Email" },
+    { icon: Mail, href: "mailto:nitanshugoyal786@gmail.com", ariaLabel: "Send Email" },
   ];
 
   const elementRef = useRef<HTMLDivElement>(null);
@@ -40,6 +40,20 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center relative pt-16 pb-10">
       {/* Background elements */}
@@ -59,10 +73,17 @@ const Hero = () => {
           </p>
           
           <div className="flex gap-4 mt-4">
-            <Button className="bg-gradient-to-r from-neon-green to-neon-blue text-dark font-medium hover:shadow-[0_0_15px_rgba(190,255,240,0.5)] border-none">
+            <Button 
+              className="bg-gradient-to-r from-neon-green to-neon-blue text-dark font-medium hover:shadow-[0_0_15px_rgba(190,255,240,0.5)] border-none"
+              onClick={scrollToProjects}
+            >
               View Projects
             </Button>
-            <Button variant="outline" className="border-neon-pink text-neon-pink hover:bg-neon-pink/10 hover:shadow-[0_0_15px_rgba(255,46,99,0.5)]">
+            <Button 
+              variant="outline" 
+              className="border-neon-pink text-neon-pink hover:bg-neon-pink/10 hover:shadow-[0_0_15px_rgba(255,46,99,0.5)]"
+              onClick={scrollToContact}
+            >
               Contact Me
             </Button>
           </div>
@@ -87,8 +108,8 @@ const Hero = () => {
           <div className="relative">
             <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-neon-green/50 p-1">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                alt="Portfolio Owner" 
+                src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
+                alt="Nitanshu Goyal" 
                 className="w-full h-full object-cover rounded-full"
               />
             </div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
@@ -43,21 +43,15 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: Phone,
-      title: "Phone",
-      details: "+1 (123) 456-7890",
-      href: "tel:+11234567890"
-    },
-    {
       icon: Mail,
       title: "Email",
-      details: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      details: "nitanshugoyal786@gmail.com",
+      href: "mailto:nitanshugoyal786@gmail.com"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "San Francisco, CA",
+      details: "Patiala, Punjab",
       href: "https://maps.google.com"
     }
   ];
@@ -76,7 +70,7 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {contactInfo.map((info, index) => (
               <a 
                 key={index}

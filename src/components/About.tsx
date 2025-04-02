@@ -45,7 +45,7 @@ const About = () => {
               <div className="md:col-span-1">
                 <div className="rounded-lg overflow-hidden border border-neon-green/30">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                    src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
                     alt="About Me" 
                     className="w-full h-auto object-cover"
                   />
@@ -70,7 +70,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="text-neon-pink font-medium mb-2">Location</h3>
-                    <p className="text-sm text-foreground/80">Patiala,Punjab</p>
+                    <p className="text-sm text-foreground/80">Patiala, Punjab</p>
                   </div>
                   <div>
                     <h3 className="text-neon-blue font-medium mb-2">Email</h3>
