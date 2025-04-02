@@ -27,9 +27,9 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A modern e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, cart functionality, and payment integration.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+      title: 'To-do-list',
+      description: 'A minimalistic To-Do List app for managing tasks with add, edit, and delete functionality. Implemented features for adding, editing, deleting, and marking tasks as complete.',
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       demoLink: '#',
       codeLink: '#',
@@ -37,53 +37,23 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Finance Dashboard',
-      description: 'An interactive dashboard for tracking personal finances. Built with React, Chart.js, and Firebase. Includes expense tracking, budgeting, and financial insights.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
-      tags: ['React', 'Firebase', 'Chart.js', 'Tailwind CSS'],
+      title: 'Rock-paper-scissor',
+      description: 'A simple Rock-Paper-Scissors game with interactive UI and real-time result display. Implemented game logic, real-time score tracking, and dynamic UI updates for a seamless user experience.',
+      image: 'https://images.unsplash.com/photo-1551431009-a802eeec77b1?auto=format&fit=crop&w=800&q=80',
+      tags: ['Html', 'Css', 'javascript'],
       demoLink: '#',
       codeLink: '#',
       category: 'web'
     },
     {
       id: 3,
-      title: 'Fitness Tracker App',
-      description: 'A mobile app for tracking workouts and fitness progress. Built with React Native and Firebase. Features include workout logs, progress charts, and personalized recommendations.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+      title: 'Capstone',
+      description: 'Focused on delivering an intuitive user experience with clean UI design and seamless navigation. Incorporated important elements for a professional portfolio website.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
       tags: ['React Native', 'Firebase', 'Expo', 'Redux'],
       demoLink: '#',
       codeLink: '#',
-      category: 'mobile'
-    },
-    {
-      id: 4,
-      title: 'Corporate Website Redesign',
-      description: 'A complete redesign of a corporate website focusing on improved user experience, accessibility, and modern visual design. Implemented with HTML, CSS, and JavaScript.',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Figma'],
-      demoLink: '#',
-      codeLink: '#',
-      category: 'design'
-    },
-    {
-      id: 5,
-      title: 'Task Management Application',
-      description: 'A collaborative task management application with real-time updates. Built with React, Socket.io, and MongoDB. Features include task assignment, status tracking, and team collaboration.',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-      tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-      demoLink: '#',
-      codeLink: '#',
       category: 'web'
-    },
-    {
-      id: 6,
-      title: 'Social Media App UI Design',
-      description: 'A comprehensive UI design for a social media application. Created with Figma, focusing on intuitive navigation, engaging visual design, and seamless user experience.',
-      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952',
-      tags: ['Figma', 'UI/UX', 'Prototyping'],
-      demoLink: '#',
-      codeLink: '#',
-      category: 'design'
     },
   ];
   
