@@ -111,11 +111,7 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/a701ffe8-28f4-4cb3-91f0-3b456f3e2525.png" 
                   alt="Nitanshu Goyal" 
-                  className="w-full h-full object-cover"
-                  style={{
-                    objectPosition: '100% 35%', // Adjusted to center the face vertically
-                    transform: 'scale(1.3)', // Slight zoom to fill the circle better
-                  }}
+                  className="w-full h-full object-cover object-center object-[center_35%]"
                 />
               </div>
             </div>
