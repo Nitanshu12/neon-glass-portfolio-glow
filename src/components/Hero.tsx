@@ -1,7 +1,7 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Twitter, Mail, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   const socialLinks = [
@@ -10,6 +10,16 @@ const Hero = () => {
     { icon: Twitter, href: "https://twitter.com", ariaLabel: "Twitter Profile" },
     { icon: Mail, href: "mailto:nitanshugoyal786@gmail.com", ariaLabel: "Send Email" },
   ];
+
+  // Image positioning state
+  const [imagePosition, setImagePosition] = useState({
+    x: 50, // percentage (0-100)
+    y: 42, // percentage (0-100)
+    scale: 1.1, // zoom level
+  });
+
+  // State to toggle image adjustment controls
+  const [showControls, setShowControls] = useState(false);
 
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -52,6 +62,33 @@ const Hero = () => {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Image position adjustment functions
+  const adjustPosition = (direction: 'up' | 'down' | 'left' | 'right') => {
+    const step = 2; // percentage step for each click
+    setImagePosition(prev => {
+      switch (direction) {
+        case 'up':
+          return { ...prev, y: Math.max(0, prev.y - step) };
+        case 'down':
+          return { ...prev, y: Math.min(100, prev.y + step) };
+        case 'left':
+          return { ...prev, x: Math.max(0, prev.x - step) };
+        case 'right':
+          return { ...prev, x: Math.min(100, prev.x + step) };
+        default:
+          return prev;
+      }
+    });
+  };
+
+  const adjustZoom = (increase: boolean) => {
+    const step = 0.05;
+    setImagePosition(prev => ({
+      ...prev,
+      scale: increase ? Math.min(2, prev.scale + step) : Math.max(0.5, prev.scale - step)
+    }));
   };
 
   return (
@@ -111,11 +148,65 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/a701ffe8-28f4-4cb3-91f0-3b456f3e2525.png" 
                   alt="Nitanshu Goyal" 
-                  className="w-full h-full object-cover object-center object-[center_35%]"
+                  className="w-full h-full object-cover"
+                  style={{
+                    objectPosition: `${imagePosition.x}% ${imagePosition.y}%`,
+                    transform: `scale(${imagePosition.scale})`,
+                    transition: 'all 0.2s ease-in-out'
+                  }}
                 />
               </div>
             </div>
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-green/20 to-neon-blue/20 blur-xl -z-10"></div>
+            
+            {/* Toggle for image adjustment controls */}
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-background/80 backdrop-blur-sm text-xs"
+              onClick={() => setShowControls(!showControls)}
+            >
+              {showControls ? 'Hide Controls' : 'Adjust Image'}
+            </Button>
+            
+            {/* Image adjustment controls */}
+            {showControls && (
+              <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-neon-green/50 flex flex-col gap-2 w-56">
+                <div className="flex justify-between items-center">
+                  <span className="text-xs text-neon-green">Position:</span>
+                  <div className="grid grid-cols-3 gap-1">
+                    <div></div>
+                    <Button variant="ghost" size="icon" className="h-6 w-6 p-0" onClick={() => adjustPosition('up')}>
+                      <ChevronUp size={14} />
+                    </Button>
+                    <div></div>
+                    <Button variant="ghost" size="icon" className="h-6 w-6 p-0" onClick={() => adjustPosition('left')}>
+                      <ChevronLeft size={14} />
+                    </Button>
+                    <div></div>
+                    <Button variant="ghost" size="icon" className="h-6 w-6 p-0" onClick={() => adjustPosition('right')}>
+                      <ChevronRight size={14} />
+                    </Button>
+                    <div></div>
+                    <Button variant="ghost" size="icon" className="h-6 w-6 p-0" onClick={() => adjustPosition('down')}>
+                      <ChevronDown size={14} />
+                    </Button>
+                    <div></div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-neon-green">Zoom:</span>
+                  <div className="flex gap-1">
+                    <Button variant="ghost" size="sm" className="h-6 px-2 py-0 text-xs" onClick={() => adjustZoom(false)}>-</Button>
+                    <span className="text-xs flex items-center">{imagePosition.scale.toFixed(2)}x</span>
+                    <Button variant="ghost" size="sm" className="h-6 px-2 py-0 text-xs" onClick={() => adjustZoom(true)}>+</Button>
+                  </div>
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Position: X:{imagePosition.x}% Y:{imagePosition.y}%
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
