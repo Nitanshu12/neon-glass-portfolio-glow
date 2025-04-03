@@ -109,9 +109,9 @@ const Hero = () => {
             <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-neon-green/50 p-1">
               <div className="w-full h-full rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
+                  src="/lovable-uploads/a701ffe8-28f4-4cb3-91f0-3b456f3e2525.png" 
                   alt="Nitanshu Goyal" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center object-[center_35%]"
                 />
               </div>
             </div>
