@@ -113,8 +113,8 @@ const Hero = () => {
                   alt="Nitanshu Goyal" 
                   className="w-full h-full object-cover"
                   style={{
-                    objectPosition: '50% 35%', // Adjusted to center the face vertically
-                    transform: 'scale(1.05)', // Slight zoom to fill the circle better
+                    objectPosition: '100% 35%', // Adjusted to center the face vertically
+                    transform: 'scale(1.3)', // Slight zoom to fill the circle better
                   }}
                 />
               </div>
