@@ -111,7 +111,7 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
                   alt="Nitanshu Goyal" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-[50%_15%] scale-110"
                 />
               </div>
             </div>
