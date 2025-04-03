@@ -107,11 +107,13 @@ const Hero = () => {
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative">
             <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-neon-green/50 p-1">
-              <img 
-                src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
-                alt="Nitanshu Goyal" 
-                className="w-full h-full object-cover rounded-full"
-              />
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img 
+                  src="/lovable-uploads/33aa940c-089b-4dc6-addb-55744625d050.png" 
+                  alt="Nitanshu Goyal" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-green/20 to-neon-blue/20 blur-xl -z-10"></div>
           </div>
